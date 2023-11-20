@@ -37,7 +37,7 @@ cp nginx_source_dir/conf/uwsgi_params .
 - Start the nginx and uwsgi servers
 ```
 # start nginx
-nginx -p $NGINX_PREFIX -c path_to_nginx_conf
+nginx -p $NGINX_PREFIX -c /home/aditi/CodeSurgeon/test-nginx-uwsgi/nginx-cache.conf 
 # start uwsgi server
 uwsgi --socket 127.0.0.1:9000 --wsgi-file server.py
 ```
@@ -50,3 +50,5 @@ curl -X GET localhost:80/path1
 curl -X GET localhost:80/path2
 curl -X GET localhost:80/path3
 ```
+
+<!-- sudo /home/aditi/CodeSurgeon/test-nginx-uwsgi/nginx-release-1.25.2/objs/nginx -p /home/aditi/CodeSurgeon/test-nginx-uwsgi/nginx_data_files_dir/ -c /home/aditi/CodeSurgeon/test-nginx-uwsgi/nginx-cache.conf   -->
